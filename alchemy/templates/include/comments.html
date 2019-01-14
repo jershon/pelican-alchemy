@@ -18,3 +18,8 @@
     Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
   </noscript>
 {% endif %}
+
+{% if PELICAN_COMMENT_SYSTEM %}
+  {% import 'pcs/comments.html' as pcs with context %}
+  {{ pcs.comments_quickstart(PCS_EMAIL_USER, PCS_EMAIL_DOMAIN) }}
+{% endif %}  
